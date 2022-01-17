@@ -12,10 +12,10 @@ variables:
   dotnetSdkVersion: '5.x'
 
 steps:
-- task: UseDotNet@2
-  displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+- task: NodeTool@0 
   inputs:
-    version: '$(dotnetSdkVersion)'
+    versionSpec: 12.x
+  displayName: 'Install Node.js'
 
 - task: Npm@1
   displayName: 'Run npm install'
